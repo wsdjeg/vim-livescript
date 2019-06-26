@@ -10,7 +10,7 @@ if exists('current_compiler')
   finish
 endif
 
-let current_compiler = 'ls'
+let current_compiler = 'lsc'
 " Pattern to check if livescript is the compiler
 let s:pat = '^' . current_compiler
 
@@ -44,7 +44,7 @@ function! s:SetMakePrg()
 endfunction
 
 " Set a dummy compiler so we can check whether to set locally or globally.
-CompilerSet makeprg=ls
+CompilerSet makeprg=lsc
 call s:SetMakePrg()
 
 CompilerSet errorformat=%EFailed\ at:\ %f,
